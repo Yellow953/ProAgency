@@ -1,549 +1,341 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('layouts/app')
 
-<head>
-    <!-- basic -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <!-- mobile metas -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
-    <!-- site metas -->
-    <title>ProAgency</title>
-    <meta name="keywords" content="">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <!-- bootstrap css -->
-    <link rel="stylesheet" href="{{asset('assets/css/bootstrap.min.css')}}">
-    <!-- style css -->
-    <link rel="stylesheet" href="{{asset('assets/css/style.css')}}">
-    <!-- Responsive-->
-    <link rel="stylesheet" href="{{asset('assets/css/responsive.css')}}">
-    <!-- fevicon -->
-    <link rel="icon" href="{{asset('assets/images/fevicon.png')}}" type="image/gif" />
-    <!-- Scrollbar Custom CSS -->
-    <link rel="stylesheet" href="{{asset('assets/css/jquery.mCustomScrollbar.min.css')}}">
+@section('content')
+<!-- header -->
+<header>
+    <div class="header">
+        <div class="white_bg">
+            @include('layouts._header')
 
-    <!-- Tweaks for older IEs-->
-    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css"
-        media="screen">
-</head>
-<!-- body -->
-
-<body class="main-layout">
-    <!-- loader  -->
-    <div class="loader_bg">
-        <div class="loader"><img src="{{asset('assets/images/loading.gif')}}" alt="#" /></div>
-    </div>
-    <!-- end loader -->
-    <!-- header -->
-    <header>
-        <!-- header inner -->
-        <div class="header">
-            <div class="white_bg">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
-                            <div class="full">
-                                <div class="center-desk">
-                                    <div class="logo">
-                                        <a href="index.html"><img src="{{asset('assets/images/logo.png')}}"
-                                                alt="#" /></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
-                            <nav class="navigation navbar navbar-expand-md navbar-dark ">
-                                <button class="navbar-toggler" type="button" data-toggle="collapse"
-                                    data-target="#navbarsExample04" aria-controls="navbarsExample04"
-                                    aria-expanded="false" aria-label="Toggle navigation">
-                                    <span class="navbar-toggler-icon"></span>
-                                </button>
-                                <div class="collapse navbar-collapse" id="navbarsExample04">
-                                    <ul class="navbar-nav mr-auto">
-                                        <li class="nav-item active">
-                                            <a class="nav-link" href="index.html"> Home </a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="#">About</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="#">Services </a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="#">News</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="#">Contact Us</a>
-                                        </li>
-                                        <li class="nav-item d_none le_co">
-                                            <a class="nav-link" href="#"><i class="fa fa-user" aria-hidden="true"></i>
-                                                Login</a>
-                                        </li>
-                                        <li class="nav-item d_none le_co">
-                                            <a class="nav-link" href="#"><i class="fa fa-search"
-                                                    aria-hidden="true"></i></a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </nav>
-                        </div>
-                    </div>
-                </div>
-                <!-- end header inner -->
-                <!-- end header -->
-                <!-- banner -->
-                <section class="banner_main">
-                    <div id="banner1" class="carousel slide" data-ride="carousel">
-                        <ol class="carousel-indicators">
-                            <li data-target="#banner1" data-slide-to="0" class="active"></li>
-                            <li data-target="#banner1" data-slide-to="1"></li>
-                            <li data-target="#banner1" data-slide-to="2"></li>
-                        </ol>
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <div class="container-fluid">
-                                    <div class="carousel-caption">
-                                        <div class="row">
-                                            <div class="col-md-12 col-lg-7">
-                                                <div class="text-bg">
-                                                    <span>Progress & Success</span>
-                                                    <h1>c u r r e n c y</h1>
-                                                    <p>It is a long established fact that a reader will be distracted by
-                                                        the readable It is a long established fact that a reader will be
-                                                        distracted by the readable </p>
-                                                    <a class="read_more" href="#"><img
-                                                            src="{{asset('assets/images/btn_h.png')}}" alt="#" />
-                                                        Discover Now</a>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12 col-lg-5">
-                                                <div class="text_img">
-                                                    <figure><img src="{{asset('assets/images/ban_img.png')}}" alt="#" />
-                                                    </figure>
-                                                </div>
+            <!-- banner -->
+            <section class="banner_main">
+                <div id="banner1" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="container-fluid">
+                                <div class="carousel-caption">
+                                    <div class="row">
+                                        <div class="col-md-12 col-lg-7">
+                                            <div class="text-bg">
+                                                <span>Pro Agency</span>
+                                                <p>Trade Safe with Pro Agency</p>
+                                                <a class="read_more" href="#"><img
+                                                        src="{{asset('assets/images/btn_h.png')}}" alt="#" />
+                                                    Action</a>
                                             </div>
                                         </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <div class="container-fluid">
-                                    <div class="carousel-caption">
-                                        <div class="row">
-                                            <div class="col-md-12 col-lg-7">
-                                                <div class="text-bg">
-                                                    <span>Progress & Success</span>
-                                                    <h1>c u r r e n c y</h1>
-                                                    <p>It is a long established fact that a reader will be distracted by
-                                                        the readable It is a long established fact that a reader will be
-                                                        distracted by the readable </p>
-                                                    <a class="read_more" href="#"><img
-                                                            src="{{asset('assets/images/btn_h.png')}}" alt="#" />
-                                                        Discover Now</a>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12 col-lg-5">
-                                                <div class="text_img">
-                                                    <figure><img src="{{asset('assets/images/ban_img.png')}}" alt="#" />
-                                                    </figure>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <div class="container-fluid">
-                                    <div class="carousel-caption">
-                                        <div class="row">
-                                            <div class="col-md-12 col-lg-7">
-                                                <div class="text-bg">
-                                                    <span>Progress & Success</span>
-                                                    <h1>c u r r e n c y</h1>
-                                                    <p>It is a long established fact that a reader will be distracted by
-                                                        the readable It is a long established fact that a reader will be
-                                                        distracted by the readable </p>
-                                                    <a class="read_more" href="#"><img
-                                                            src="{{asset('assets/images/btn_h.png')}}" alt="#" />
-                                                        Discover Now</a>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12 col-lg-5">
-                                                <div class="text_img">
-                                                    <figure><img src="{{asset('assets/images/ban_img.png')}}" alt="#" />
-                                                    </figure>
-                                                </div>
+                                        <div class="col-md-12 col-lg-5">
+                                            <div class="text_img">
+                                                <figure><img src="{{asset('assets/images/ban_img.png')}}" alt="#" />
+                                                </figure>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <a class="carousel-control-prev" href="#banner1" role="button" data-slide="prev">
-                            <i class="fa fa-chevron-left" aria-hidden="true"></i>
-                        </a>
-                        <a class="carousel-control-next" href="#banner1" role="button" data-slide="next">
-                            <i class="fa fa-chevron-right" aria-hidden="true"></i>
-                        </a>
-                    </div>
-                </section>
-            </div>
-        </div>
-    </header>
-    <!-- end banner -->
-    <!-- about section -->
-    <div class="about">
-        <div class="container">
-            <div class="row d_flex">
-                <div class="col-md-12 col-lg-5">
-                    <div class="about_img">
-                        <figure><img src="{{asset('assets/images/about.png')}}" alt="#" /></figure>
                     </div>
                 </div>
-                <div class="col-md-12 col-lg-7">
-                    <div class="titlepage">
-                        <h2> <span class="yellow">ABOUT US</span><br>Welcome TO OUR DEGITALEX</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                        </p>
-                        <a class="read_more" href="#">Read More</a>
-                    </div>
+            </section>
+        </div>
+    </div>
+</header>
+<!-- end banner -->
+<!-- about section -->
+<div class="about">
+    <div class="container">
+        <div class="row d_flex">
+            <div class="col-md-12 col-lg-5">
+                <div class="about_img">
+                    <figure><img src="{{asset('assets/images/about.png')}}" alt="#" /></figure>
+                </div>
+            </div>
+            <div class="col-md-12 col-lg-7">
+                <div class="titlepage">
+                    <h2> <span class="yellow">ABOUT US</span><br>Welcome TO Pro Agency</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit impedit consectetur sed iusto ea
+                        accusantium, mollitia reprehenderit fugiat delectus natus quisquam assumenda hic provident
+                        veritatis autem alias eaque recusandae quod?
+                    </p>
+                    <a class="read_more" href="#">Read More</a>
                 </div>
             </div>
         </div>
     </div>
-    <!-- about section -->
-    <!-- services section -->
-    <div class="services">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="titlepage">
-                        <h2> <span class="yellow">Services</span><br>consectetur adipiscing elit</h2>
-                    </div>
+</div>
+<!-- about section -->
+
+<!-- services section -->
+<div class="services">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="titlepage">
+                    <h2> <span class="yellow">Services</span></h2>
                 </div>
-                <div class="col-md-3 col-sm-6">
-                    <div id="ho_color" class="services_main">
-                        <i><img src="{{asset('assets/images/services_icon1.png')}}" alt="#" /></i>
-                        <img class="ho" src="{{asset('assets/images/services_icon1h.png')}}" alt="#" />
-                        <h3>Safe & Secure</h3>
-                        <p>ncididunt ut labore et dolore
-                            magna aliqua. Ut enim
-                        </p>
-                        <a class="read_more" href="#">Read More</a>
-                    </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div id="ho_color" class="services_main">
+                    <i><img src="{{asset('assets/images/services_icon1.png')}}" alt="#" /></i>
+                    <img class="ho" src="{{asset('assets/images/services_icon1h.png')}}" alt="#" />
+                    <h3>Investments</h3>
+                    <p>
+                        Invest your money in the forex market with 0% risk. We will manage your account and deliver your
+                        profit on a daily or a weekly schedule. And if you
+                        want your money back you will get it within a week so we can close our long term trades.
+                    </p>
+                    <a class="read_more" href="#">Read More</a>
                 </div>
-                <div class="col-md-3 col-sm-6">
-                    <div id="ho_color" class="services_main">
-                        <i><img src="{{asset('assets/images/services_icon2.png')}}" alt="#" /></i>
-                        <img class="ho" src="{{asset('assets/images/services_icon2h.png')}}" alt="#" />
-                        <h3>Mobile Apps</h3>
-                        <p>ncididunt ut labore et dolore
-                            magna aliqua. Ut enim
-                        </p>
-                        <a class="read_more" href="#">Read More</a>
-                    </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div id="ho_color" class="services_main">
+                    <i><img src="{{asset('assets/images/services_icon2.png')}}" alt="#" /></i>
+                    <img class="ho" src="{{asset('assets/images/services_icon2h.png')}}" alt="#" />
+                    <h3>Trading Signals</h3>
+                    <p>
+                        You will be able to enter our signal group on whatsapp and you will be able to do the same
+                        trades that we do in order to get the same profit.
+                    </p>
+                    <a class="read_more" href="#">Read More</a>
                 </div>
-                <div class="col-md-3 col-sm-6">
-                    <div id="ho_color" class="services_main">
-                        <i><img src="{{asset('assets/images/services_icon3.png')}}" alt="#" /></i>
-                        <img class="ho" src="{{asset('assets/images/services_icon3h.png')}}" alt="#" />
-                        <h3>Wallet</h3>
-                        <p>ncididunt ut labore et dolore
-                            magna aliqua. Ut enim
-                        </p>
-                        <a class="read_more" href="#">Read More</a>
-                    </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div id="ho_color" class="services_main">
+                    <i><img src="{{asset('assets/images/services_icon3.png')}}" alt="#" /></i>
+                    <img class="ho" src="{{asset('assets/images/services_icon3h.png')}}" alt="#" />
+                    <h3>1 Million Challenge</h3>
+                    <p>We will turn your 100$ account into 1 million$ by linking all our accounts togetherby "Copy
+                        Trade", and you will be able to see the result on the meta trader 5 mobile app.
+                    </p>
+                    <a class="read_more" href="#">Read More</a>
                 </div>
-                <div class="col-md-3 col-sm-6">
-                    <div id="ho_color" class="services_main">
-                        <i><img src="{{asset('assets/images/services_icon4.png')}}" alt="#" /></i>
-                        <img class="ho" src="{{asset('assets/images/services_icon4h.png')}}" alt="#" />
-                        <h3>Experts Support</h3>
-                        <p>ncididunt ut labore et dolore
-                            magna aliqua. Ut enim
-                        </p>
-                        <a class="read_more" href="#">Read More</a>
-                    </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div id="ho_color" class="services_main">
+                    <i><img src="{{asset('assets/images/services_icon4.png')}}" alt="#" /></i>
+                    <img class="ho" src="{{asset('assets/images/services_icon4h.png')}}" alt="#" />
+                    <h3>Commission</h3>
+                    <p>
+                        You will get a commission into your account when you refer us to your friends or family.
+                    </p>
+                    <a class="read_more" href="#">Read More</a>
                 </div>
             </div>
         </div>
     </div>
-    <!-- end services section -->
-    <!-- bitcoins section -->
-    <div class="bitcoins">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-8 offset-md-2">
-                    <div class="titlepage">
-                        <h2> <span class="yellow">Buy and Sell Bitcoins</span><br>Why are so many people investing in
-                            digital </h2>
-                    </div>
+</div>
+<!-- end services section -->
+
+<!-- bitcoins section -->
+<div class="bitcoins">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <div class="titlepage">
+                    <h2> <span class="yellow">Open an MT5 account with us</span><br>Why are so many people starting to
+                        trade on the forex market </h2>
                 </div>
-                <div class="col-md-8 offset-md-2">
-                    <div class="bitcoins_main">
-                        <figure><img src="{{asset('assets/images/bitcoins.jpg')}}" alt="#" /></figure>
-                        <a class="read_more" href="#">Start now </a>
-                    </div>
+            </div>
+            <div class="col-md-8 offset-md-2">
+                <div class="bitcoins_main">
+                    <figure><img src="{{asset('assets/images/bitcoins.jpg')}}" alt="#" /></figure>
+                    <a class="read_more" href="#">Start now </a>
                 </div>
             </div>
         </div>
     </div>
-    <!-- end bitcoins section -->
-    <!-- wallet section -->
-    <div class="wallet">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="titlepage">
-                        <h2> <span class="yellow">wallet</span><br>A MOST POWERFUL WALLET USE THIS WALLET FOR
-                            NEXT SECURE TRANSACTION.
-                        </h2>
-                    </div>
+</div>
+<!-- end bitcoins section -->
+
+<!-- wallet section -->
+<div class="wallet">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="titlepage">
+                    <h2> <span class="yellow">Investing</span><br>
+                        Get a very high profit on your invested money with 0% risk.
+                    </h2>
                 </div>
-                <div class="col-md-8 offset-md-2">
-                    <div class="wallet_main">
-                        <figure><img src="{{asset('assets/images/wallet.jpg')}}" alt="#" /></figure>
-                        <a class="read_more" href="#">Make wallet</a>
-                    </div>
+            </div>
+            <div class="col-md-8 offset-md-2">
+                <div class="wallet_main">
+                    <figure><img src="{{asset('assets/images/wallet.jpg')}}" alt="#" /></figure>
+                    <a class="read_more" href="#">Start Investing</a>
                 </div>
             </div>
         </div>
     </div>
-    <!-- end wallet section -->
-    <!-- Subscribe section -->
-    <div class="subscribe">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-8 offset-md-2">
-                    <div class="subscribe_main">
-                        <h3>Subscribe to our newsletter</h3>
-                        <p>It is a long established fact that a reader will be distracted by the readable content of a
-                            page when looking at its layout. The point of using Lorem Ipsum is that it has a
-                            more-or-less normal distribution of letters, </p>
-                        <form class="news_form">
-                            <input class="enter_form" placeholder="Enter your email" type="text"
-                                name="Enter your email">
-                            <button class="subscribe_btn">subscribe now</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- end Subscribe section -->
-    <!-- testimonial -->
-    <div class="testimonial">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 ">
-                    <div class="titlepage">
-                        <h2> <span class="yellow">Testimonial</span><br>What is says our clients</h2>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div id="testimoni" class="carousel slide testimonial_Carousel " data-ride="carousel">
-            <ol class="carousel-indicators">
-                <li data-target="#testimoni" data-slide-to="0" class="active"></li>
-                <li data-target="#testimoni" data-slide-to="1"></li>
-                <li data-target="#testimoni" data-slide-to="2"></li>
-                <li data-target="#testimoni" data-slide-to="3"></li>
-            </ol>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <div class="container">
-                        <div class="carousel-caption ">
-                            <div class="row">
-                                <div class="col-md-10 offset-md-1">
-                                    <div class="test_box">
-                                        <i><img src="{{asset('assets/images/test.png')}}"></i>
-                                        <h3>distracted by</h3>
-                                        <p>It is a long established fact that a reader will be distracted by the
-                                            readable content of a page when looking at its layout. The point of using
-                                            Lorem Ipsum is that it has a more-or-less normal distribution of letters,
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="container">
-                        <div class="carousel-caption">
-                            <div class="row">
-                                <div class="col-md-10 offset-md-1">
-                                    <div class="test_box">
-                                        <i><img src="{{asset('assets/images/test.png')}}"></i>
-                                        <h3>distracted by</h3>
-                                        <p>It is a long established fact that a reader will be distracted by the
-                                            readable content of a page when looking at its layout. The point of using
-                                            Lorem Ipsum is that it has a more-or-less normal distribution of letters,
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="container">
-                        <div class="carousel-caption">
-                            <div class="row">
-                                <div class="col-md-10 offset-md-1">
-                                    <div class="test_box">
-                                        <i><img src="{{asset('assets/images/test.png')}}"></i>
-                                        <h3>distracted by</h3>
-                                        <p>It is a long established fact that a reader will be distracted by the
-                                            readable content of a page when looking at its layout. The point of using
-                                            Lorem Ipsum is that it has a more-or-less normal distribution of letters,
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="container">
-                        <div class="carousel-caption">
-                            <div class="row">
-                                <div class="col-md-10 offset-md-1">
-                                    <div class="test_box">
-                                        <i><img src="{{asset('assets/images/test.png')}}"></i>
-                                        <h3>distracted by</h3>
-                                        <p>It is a long established fact that a reader will be distracted by the
-                                            readable content of a page when looking at its layout. The point of using
-                                            Lorem Ipsum is that it has a more-or-less normal distribution of letters,
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <a class="carousel-control-prev" href="#testimoni" role="button" data-slide="prev">
-                <i class="fa fa-chevron-left" aria-hidden="true"></i>
-            </a>
-            <a class="carousel-control-next" href="#testimoni" role="button" data-slide="next">
-                <i class="fa fa-chevron-right" aria-hidden="true"></i>
-            </a>
-        </div>
-    </div>
-    <!-- end testimonial section -->
-    <!-- comments  section -->
-    <div class="contact ">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="titlepage">
-                        <h2> <span class="yellow">Contact Us</span><br> Reqesute a call back</h2>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-10 offset-md-1">
-                    <form id="contac_form" class="contac_form">
-                        <div class="row">
-                            <div class="col-md-12 ">
-                                <input class="contac_control" placeholder=" Name" type="type" name="Name">
-                            </div>
-                            <div class="col-md-12">
-                                <input class="contac_control" placeholder="Phone Number  " type="type"
-                                    name="Phone Number  ">
-                            </div>
-                            <div class="col-md-12">
-                                <input class="contac_control" placeholder="Email Address" type="type"
-                                    name="Email Address">
-                            </div>
-                            <div class="col-md-12">
-                                <textarea class="textarea" placeholder="Message" type="type"
-                                    Message="Name">Message </textarea>
-                            </div>
-                            <div class="col-md-12">
-                                <button class="send_btn">Send</button>
-                            </div>
-                        </div>
+</div>
+<!-- end wallet section -->
+
+<!-- Subscribe section -->
+<div class="subscribe">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <div class="subscribe_main">
+                    <h3>Subscribe in our signals group</h3>
+                    <p>Get access to our signals group on whatsapp and start trading in the forex marget and get very
+                        high profit on your trades by copying our signals.</p>
+                    <form class="news_form">
+                        <input class="enter_form" placeholder="Enter your email" type="text" name="Enter your email">
+                        <button class="subscribe_btn">subscribe now</button>
                     </form>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="map">
-                        <figure><img src="{{asset('assets/images/map-(1).png')}}" alt="#" /></figure>
-                    </div>
+        </div>
+    </div>
+</div>
+<!-- end Subscribe section -->
+
+<!-- testimonial -->
+<div class="testimonial">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 ">
+                <div class="titlepage">
+                    <h2> <span class="yellow">Testimonial</span><br>What is says our clients</h2>
                 </div>
             </div>
         </div>
     </div>
-    <!-- end contact  section -->
-    <!--  footer -->
-    <footer>
-        <div class="footer">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-3 col-md-6 col-sm-6">
-                        <a class="logo2" href="index.html"><img src="{{asset('assets/images/loogo2.png')}}"
-                                alt="#" /></a>
-                        <div class="follow">
-                            <p>reader will be distracted by the readable content of a page when looking at its layout.
-                                The point of using Lorem Ipsum is that it has a more-or-less normal di</p>
+    <div id="testimoni" class="carousel slide testimonial_Carousel " data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#testimoni" data-slide-to="0" class="active"></li>
+            <li data-target="#testimoni" data-slide-to="1"></li>
+            <li data-target="#testimoni" data-slide-to="2"></li>
+            <li data-target="#testimoni" data-slide-to="3"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="container">
+                    <div class="carousel-caption ">
+                        <div class="row">
+                            <div class="col-md-10 offset-md-1">
+                                <div class="test_box">
+                                    <i><img src="{{asset('assets/images/test.png')}}"></i>
+                                    <h3>distracted by</h3>
+                                    <p>It is a long established fact that a reader will be distracted by the
+                                        readable content of a page when looking at its layout. The point of using
+                                        Lorem Ipsum is that it has a more-or-less normal distribution of letters,
+                                    </p>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6">
-                        <h3>Quick link</h3>
-                        <ul class="link_icon">
-                            <li class="active"> <a href="#"> <i class="fa fa-chevron-right"
-                                        aria-hidden="index.html"></i>Home</a></li>
-                            <li> <a href="#"> <i class="fa fa-chevron-right" aria-hidden="blog"></i>Hbout </a></li>
-                            <li> <a href="#"> <i class="fa fa-chevron-right" aria-hidden="contact"></i>Currency</a></li>
-                            <li> <a href="#"> <i class="fa fa-chevron-right" aria-hidden="blog"></i>Exchange</a></li>
-                            <li> <a href="#"> <i class="fa fa-chevron-right" aria-hidden="contact"></i>Subscribe</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6">
-                        <h3>Instagram </h3>
-                        <div class="follow">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do </p>
-                            <ul class="social_icon">
-                                <li> <a href="#"><i class="fa fa-facebook-f"></i></a></li>
-                                <li> <a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li> <a href="#"> <i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                                <li> <a href="#"><i class="fa fa-instagram"></i></a></li>
-                            </ul>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="container">
+                    <div class="carousel-caption">
+                        <div class="row">
+                            <div class="col-md-10 offset-md-1">
+                                <div class="test_box">
+                                    <i><img src="{{asset('assets/images/test.png')}}"></i>
+                                    <h3>distracted by</h3>
+                                    <p>It is a long established fact that a reader will be distracted by the
+                                        readable content of a page when looking at its layout. The point of using
+                                        Lorem Ipsum is that it has a more-or-less normal distribution of letters,
+                                    </p>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6">
-                        <h3>Contact us</h3>
-                        <ul class="location_icon">
-                            <li><a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i></a>Reader will be
-                                dis<br>
-                                tracted by the reada
-                            </li>
-                            <li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a>demo@gmail.com</li>
-                            <li><a href="#"><i class="fa fa-volume-control-phone" aria-hidden="true"></i></a>+01
-                                102586954775</li>
-                        </ul>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="container">
+                    <div class="carousel-caption">
+                        <div class="row">
+                            <div class="col-md-10 offset-md-1">
+                                <div class="test_box">
+                                    <i><img src="{{asset('assets/images/test.png')}}"></i>
+                                    <h3>distracted by</h3>
+                                    <p>It is a long established fact that a reader will be distracted by the
+                                        readable content of a page when looking at its layout. The point of using
+                                        Lorem Ipsum is that it has a more-or-less normal distribution of letters,
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="container">
+                    <div class="carousel-caption">
+                        <div class="row">
+                            <div class="col-md-10 offset-md-1">
+                                <div class="test_box">
+                                    <i><img src="{{asset('assets/images/test.png')}}"></i>
+                                    <h3>distracted by</h3>
+                                    <p>It is a long established fact that a reader will be distracted by the
+                                        readable content of a page when looking at its layout. The point of using
+                                        Lorem Ipsum is that it has a more-or-less normal distribution of letters,
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </footer>
-    <!-- end footer -->
-    <!-- Javascript files-->
-    <script src="{{asset('assets/js/jquery.min.js')}}"></script>
-    <script src="{{asset('assets/js/popper.min.js')}}"></script>
-    <script src="{{asset('assets/js/bootstrap.bundle.min.js')}}"></script>
-    <script src="{{asset('assets/js/jquery-3.0.0.min.js')}}"></script>
-    <!-- sidebar -->
-    <script src="{{asset('assets/js/jquery.mCustomScrollbar.concat.min.js')}}"></script>
-    <script src="{{asset('assets/js/custom.js')}}"></script>
-</body>
+        <a class="carousel-control-prev" href="#testimoni" role="button" data-slide="prev">
+            <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        </a>
+        <a class="carousel-control-next" href="#testimoni" role="button" data-slide="next">
+            <i class="fa fa-chevron-right" aria-hidden="true"></i>
+        </a>
+    </div>
+</div>
+<!-- end testimonial section -->
+<!-- comments  section -->
+<div class="contact ">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="titlepage">
+                    <h2> <span class="yellow">Contact Us</span><br> Reqesute a call back</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-10 offset-md-1">
+                <form id="contac_form" class="contac_form">
+                    <div class="row">
+                        <div class="col-md-12 ">
+                            <input class="contac_control" placeholder=" Name" type="type" name="Name">
+                        </div>
+                        <div class="col-md-12">
+                            <input class="contac_control" placeholder="Phone Number  " type="type"
+                                name="Phone Number  ">
+                        </div>
+                        <div class="col-md-12">
+                            <input class="contac_control" placeholder="Email Address" type="type" name="Email Address">
+                        </div>
+                        <div class="col-md-12">
+                            <textarea class="textarea" placeholder="Message" type="type"
+                                Message="Name">Message </textarea>
+                        </div>
+                        <div class="col-md-12">
+                            <button class="send_btn">Send</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="map">
+                    <figure><img src="{{asset('assets/images/map-(1).png')}}" alt="#" /></figure>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end contact  section -->
 
-</html>
+@include('layouts._footer')
+@endsection
