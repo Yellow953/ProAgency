@@ -5,7 +5,7 @@
             <div class="full">
                 <div class="center-desk">
                     <div class="logo">
-                        <a href="index.html" class="my-auto">>
+                        <a href="/" class="my-auto">>
                             <h1 class="text-yellow"><b>Pro Agency</b></h1>
                         </a>
 
@@ -22,23 +22,24 @@
                 <div class="collapse navbar-collapse" id="navbarsExample04">
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item active">
-                            <a class="nav-link" href="index.html"> Home </a>
+                            <a class="nav-link" href="/"> Home </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">About</a>
+                            <a class="nav-link" href="#about">About</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Services </a>
+                            <a class="nav-link" href="#services">Services </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Contact Us</a>
+                            <a class="nav-link" href="#contact">Contact Us</a>
                         </li>
                         <li class="nav-item d_none le_co">
-                            <a class="nav-link" href="#"><i class="fa fa-user" aria-hidden="true"></i>
+                            <a class="nav-link" href="/login">
                                 Login</a>
                         </li>
                         <li class="nav-item d_none le_co">
-                            <a class="nav-link" href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
+                            <a class="nav-link" href="/register">
+                                Register</a>
                         </li>
                     </ul>
                 </div>

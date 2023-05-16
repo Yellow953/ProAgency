@@ -44,7 +44,7 @@
 </header>
 <!-- end banner -->
 <!-- about section -->
-<div class="about">
+<div class="about" id="about">
     <div class="container">
         <div class="row d_flex">
             <div class="col-md-12 col-lg-5">
@@ -69,7 +69,7 @@
 <!-- about section -->
 
 <!-- services section -->
-<div class="services">
+<div class="services" id="services">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
@@ -84,8 +84,7 @@
                     <h3>Investments</h3>
                     <p>
                         Invest your money in the forex market with 0% risk. We will manage your account and deliver your
-                        profit on a daily or a weekly schedule. And if you
-                        want your money back you will get it within a week so we can close our long term trades.
+                        profit on a daily or a weekly basis.
                     </p>
                     <a class="read_more" href="#">Read More</a>
                 </div>
@@ -107,8 +106,8 @@
                     <i><img src="{{asset('assets/images/services_icon3.png')}}" alt="#" /></i>
                     <img class="ho" src="{{asset('assets/images/services_icon3h.png')}}" alt="#" />
                     <h3>Copy Trade</h3>
-                    <p>We will turn your 100$ account into 1 million$ by linking all our accounts togetherby "Copy
-                        Trade", and you will be able to see the result on the meta trader 5 mobile app.
+                    <p>We will turn your 100$ into 1 million $ by "Copy
+                        Trade", and you can see the results on the MetaTrader5 mobile app.
                     </p>
                     <a class="read_more" href="#">Read More</a>
                 </div>
@@ -298,7 +297,7 @@
 </div>
 <!-- end testimonial section -->
 <!-- comments  section -->
-<div class="contact ">
+<div class="contact" id="contact">
     <div class="container">
         <div class="row">
             <div class="col-md-12">

@@ -4,6 +4,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-3 col-md-6 col-sm-6">
+                    <img src="{{asset('assets/images/logo.png')}}" alt="" class="logo-footer">
                     <a class="logo2" href="index.html">
                         <h1 class="text-yellow"><b>Pro Agency</b></h1>
                     </a>

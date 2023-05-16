@@ -27,6 +27,10 @@
     width: 200px;
     height: auto;
 }
+.logo-footer {
+    width: 200px;
+    height: auto;
+}
 
 @media only screen and (max-width: 600px) {
     .font-size-md {
