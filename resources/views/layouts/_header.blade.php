@@ -5,7 +5,7 @@
             <div class="full">
                 <div class="center-desk">
                     <div class="logo">
-                        <a href="index.html" class="my-auto">
+                        <a href="index.html" class="my-auto">>
                             <h1 class="text-yellow"><b>Pro Agency</b></h1>
                         </a>
 

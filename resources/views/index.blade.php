@@ -4,19 +4,21 @@
 <!-- header -->
 <header>
     <div class="header">
-        <div class="white_bg">
+        <div class="white_bg p-3">
             @include('layouts._header')
 
             <!-- banner -->
-            <section class="banner_main">
+            <section class="banner_main p-0">
                 <div id="banner1" class="carousel slide" data-ride="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
                             <div class="container-fluid">
-                                <div class="carousel-caption">
+                                <div class="carousel-caption p-0">
                                     <div class="row">
-                                        <div class="col-md-12 col-lg-7">
-                                            <div class="text-bg">
+                                        <div class="col-md-12 col-lg-6">
+                                            <div class="text-bg m-5">
+                                                <img src="{{asset('assets/images/logo.png')}}" alt=""
+                                                    class="banner-img rounded-full "> <br>
                                                 <span>Pro Agency</span>
                                                 <p>Trade Safe with Pro Agency</p>
                                                 <a class="read_more" href="#"><img
@@ -24,9 +26,9 @@
                                                     Action</a>
                                             </div>
                                         </div>
-                                        <div class="col-md-12 col-lg-5">
+                                        <div class="col-md-12 col-lg-6">
                                             <div class="text_img">
-                                                <figure><img src="{{asset('assets/images/ban_img.png')}}" alt="#" />
+                                                <figure><img src="{{asset('assets/images/forex1.png')}}" alt="#" />
                                                 </figure>
                                             </div>
                                         </div>
@@ -104,7 +106,7 @@
                 <div id="ho_color" class="services_main">
                     <i><img src="{{asset('assets/images/services_icon3.png')}}" alt="#" /></i>
                     <img class="ho" src="{{asset('assets/images/services_icon3h.png')}}" alt="#" />
-                    <h3>1 Million Challenge</h3>
+                    <h3>Copy Trade</h3>
                     <p>We will turn your 100$ account into 1 million$ by linking all our accounts togetherby "Copy
                         Trade", and you will be able to see the result on the meta trader 5 mobile app.
                     </p>
@@ -176,8 +178,12 @@
         <div class="row">
             <div class="col-md-8 offset-md-2">
                 <div class="subscribe_main">
-                    <h3>Subscribe in our signals group</h3>
-                    <p>Get access to our signals group on whatsapp and start trading in the forex marget and get very
+                    <h3 class="text-yellow">Subscribe in our signals group</h3>
+                    <p class="text-white my-3 font-size-md">Get access to our signals group on whatsapp and start
+                        trading in
+                        the
+                        forex
+                        marget and get very
                         high profit on your trades by copying our signals.</p>
                     <form class="news_form">
                         <input class="enter_form" placeholder="Enter your email" type="text" name="Enter your email">

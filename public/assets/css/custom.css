@@ -1,3 +1,35 @@
 .text-yellow {
-    color: #fbca47;
+    color: #fbca47 !important;
+}
+.text-blue {
+    color: #17094c !important;
+}
+.text-black {
+    color: black !important;
+}
+
+.bg-blue {
+    background-color: #17094c;
+}
+.bg-yellow {
+    background-color: #fbca47;
+}
+
+.rounded-full {
+    border-radius: 50%;
+}
+
+.font-size-md {
+    font-size: 2em !important;
+}
+
+.banner-img {
+    width: 200px;
+    height: auto;
+}
+
+@media only screen and (max-width: 600px) {
+    .font-size-md {
+        font-size: 1.25em !important;
+    }
 }
