@@ -56,9 +56,15 @@
                 <div class="titlepage">
                     <h2> <span class="yellow">ABOUT US</span><br>Welcome TO Pro Agency</h2>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit impedit consectetur sed iusto ea
-                        accusantium, mollitia reprehenderit fugiat delectus natus quisquam assumenda hic provident
-                        veritatis autem alias eaque recusandae quod?
+                        Welcome to Pro Agency! With our headquarters in the vibrant city of Mreijeh and a branch in the
+                        bustling city of Tripoli, we are a leading provider of forex trading services in Lebanon. <br>
+
+                        Our services are many and all of them help you achieve financial freedom in the stock market and
+                        get you an income plus profit from the forex market. <br>
+
+                        We also have great customer support with our WhatsApp groups and our numbers. Whether you want
+                        to visit us at our branches or on WhatsApp we always welcome you and answer all of your
+                        questions. <br>
                     </p>
                     <a class="read_more" href="#">Read More</a>
                 </div>
@@ -128,27 +134,6 @@
 </div>
 <!-- end services section -->
 
-<!-- bitcoins section -->
-<div class="bitcoins">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-8 offset-md-2">
-                <div class="titlepage">
-                    <h2> <span class="yellow">Open an MT5 account with us</span><br>Why are so many people starting to
-                        trade on the forex market </h2>
-                </div>
-            </div>
-            <div class="col-md-8 offset-md-2">
-                <div class="bitcoins_main">
-                    <figure><img src="{{asset('assets/images/bitcoins.jpg')}}" alt="#" /></figure>
-                    <a class="read_more" href="#">Start now </a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- end bitcoins section -->
-
 <!-- wallet section -->
 <div class="wallet">
     <div class="container">
@@ -201,7 +186,7 @@
         <div class="row">
             <div class="col-md-12 ">
                 <div class="titlepage">
-                    <h2> <span class="yellow">Testimonial</span><br>What is says our clients</h2>
+                    <h2> <span class="yellow">Testimonials</span><br>What our clients say about us</h2>
                 </div>
             </div>
         </div>
@@ -211,7 +196,6 @@
             <li data-target="#testimoni" data-slide-to="0" class="active"></li>
             <li data-target="#testimoni" data-slide-to="1"></li>
             <li data-target="#testimoni" data-slide-to="2"></li>
-            <li data-target="#testimoni" data-slide-to="3"></li>
         </ol>
         <div class="carousel-inner">
             <div class="carousel-item active">
@@ -221,10 +205,11 @@
                             <div class="col-md-10 offset-md-1">
                                 <div class="test_box">
                                     <i><img src="{{asset('assets/images/test.png')}}"></i>
-                                    <h3>distracted by</h3>
-                                    <p>It is a long established fact that a reader will be distracted by the
-                                        readable content of a page when looking at its layout. The point of using
-                                        Lorem Ipsum is that it has a more-or-less normal distribution of letters,
+                                    <h3>Name Family 1</h3>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio exercitationem est
+                                        consectetur corrupti cupiditate reprehenderit quia facilis laborum non,
+                                        voluptates impedit vitae molestiae consequatur officiis, neque ea cum saepe
+                                        expedita.
                                     </p>
                                 </div>
                             </div>
@@ -239,10 +224,11 @@
                             <div class="col-md-10 offset-md-1">
                                 <div class="test_box">
                                     <i><img src="{{asset('assets/images/test.png')}}"></i>
-                                    <h3>distracted by</h3>
-                                    <p>It is a long established fact that a reader will be distracted by the
-                                        readable content of a page when looking at its layout. The point of using
-                                        Lorem Ipsum is that it has a more-or-less normal distribution of letters,
+                                    <h3>Name Family 2</h3>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio exercitationem est
+                                        consectetur corrupti cupiditate reprehenderit quia facilis laborum non,
+                                        voluptates impedit vitae molestiae consequatur officiis, neque ea cum saepe
+                                        expedita.
                                     </p>
                                 </div>
                             </div>
@@ -257,28 +243,11 @@
                             <div class="col-md-10 offset-md-1">
                                 <div class="test_box">
                                     <i><img src="{{asset('assets/images/test.png')}}"></i>
-                                    <h3>distracted by</h3>
-                                    <p>It is a long established fact that a reader will be distracted by the
-                                        readable content of a page when looking at its layout. The point of using
-                                        Lorem Ipsum is that it has a more-or-less normal distribution of letters,
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <div class="container">
-                    <div class="carousel-caption">
-                        <div class="row">
-                            <div class="col-md-10 offset-md-1">
-                                <div class="test_box">
-                                    <i><img src="{{asset('assets/images/test.png')}}"></i>
-                                    <h3>distracted by</h3>
-                                    <p>It is a long established fact that a reader will be distracted by the
-                                        readable content of a page when looking at its layout. The point of using
-                                        Lorem Ipsum is that it has a more-or-less normal distribution of letters,
+                                    <h3>Name Family 3</h3>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio exercitationem est
+                                        consectetur corrupti cupiditate reprehenderit quia facilis laborum non,
+                                        voluptates impedit vitae molestiae consequatur officiis, neque ea cum saepe
+                                        expedita.
                                     </p>
                                 </div>
                             </div>
@@ -329,13 +298,6 @@
                         </div>
                     </div>
                 </form>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12">
-                <div class="map">
-                    <figure><img src="{{asset('assets/images/map-(1).png')}}" alt="#" /></figure>
-                </div>
             </div>
         </div>
     </div>
