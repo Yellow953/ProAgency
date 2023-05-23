@@ -33,14 +33,26 @@
                         <li class="nav-item">
                             <a class="nav-link" href="#contact">Contact Us</a>
                         </li>
+                        @guest
                         <li class="nav-item d_none le_co">
                             <a class="nav-link" href="/login">
                                 Login</a>
                         </li>
+                        @else
                         <li class="nav-item d_none le_co">
-                            <a class="nav-link" href="/register">
-                                Register</a>
+                            <a class="nav-link" href="/user/{{auth()->user()->id}}/edit">
+                                {{auth()->user()->name}}</a>
                         </li>
+                        <li class="nav-item d_none le_co">
+                            <a class="nav-link" href="{{ route('logout') }}"
+                                onclick="event.preventDefault();document.getElementById('logout-form').submit();">
+                                Logout</a>
+                        </li>
+
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                            @csrf
+                        </form>
+                        @endguest
                     </ul>
                 </div>
             </nav>

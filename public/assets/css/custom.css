@@ -34,6 +34,9 @@
 .font-sm {
     font-size: medium !important;
 }
+.btn-rounded {
+    border-radius: 25px !important;
+}
 
 @media only screen and (max-width: 600px) {
     .font-size-md {

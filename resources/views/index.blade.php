@@ -21,9 +21,9 @@
                                                     class="banner-img rounded-full "> <br>
                                                 <span>Pro Agency</span>
                                                 <p>Trade Safe with Pro Agency</p>
-                                                <a class="read_more" href="#"><img
+                                                <a class="read_more" href="#services"><img
                                                         src="{{asset('assets/images/btn_h.png')}}" alt="#" />
-                                                    Action</a>
+                                                    Services</a>
                                             </div>
                                         </div>
                                         <div class="col-md-12 col-lg-6">
@@ -92,7 +92,8 @@
                         Invest your money in the forex market with 0% risk. We will manage your account and deliver your
                         profit on a daily or a weekly basis with the possibility to get commission on your referals.
                     </p>
-                    <a class="read_more" href="#">Read More</a>
+                    <a class="read_more" href="https://api.whatsapp.com/send/?phone=96176487639" target="_blank">Know
+                        More</a>
                 </div>
             </div>
             <div class="col-md-3 col-sm-6">
@@ -104,7 +105,8 @@
                         You will be able to enter our signal group on whatsapp and you will be able to do the same
                         trades that we do in order to get the same profit only for a small fee of 50$/month.
                     </p>
-                    <a class="read_more" href="#">Read More</a>
+                    <a class="read_more" href="https://api.whatsapp.com/send/?phone=96176487639" target="_blank">Know
+                        More</a>
                 </div>
             </div>
             <div class="col-md-3 col-sm-6">
@@ -116,7 +118,8 @@
                         into 1 million $ by "Copy
                         Trade", and you can see the results on the MetaTrader5 mobile app.
                     </p>
-                    <a class="read_more" href="#">Read More</a>
+                    <a class="read_more" href="https://api.whatsapp.com/send/?phone=96176487639" target="_blank">Know
+                        More</a>
                 </div>
             </div>
             <div class="col-md-3 col-sm-6">
@@ -128,7 +131,8 @@
                         Since the forex marketing is becoming a great opportunity to make money online, we can teach you
                         all about it with weekly calls with us and live demonstrations.
                     </p>
-                    <a class="read_more" href="#">Read More</a>
+                    <a class="read_more" href="https://api.whatsapp.com/send/?phone=96176487639" target="_blank">Know
+                        More</a>
                 </div>
             </div>
         </div>
@@ -150,7 +154,8 @@
             <div class="col-md-8 offset-md-2">
                 <div class="wallet_main">
                     <figure><img src="{{asset('assets/images/wallet.jpg')}}" alt="#" /></figure>
-                    <a class="read_more" href="#">Start Investing</a>
+                    <a class="read_more" href="https://api.whatsapp.com/send/?phone=96176565935" target="_blank">Start
+                        Investing</a>
                 </div>
             </div>
         </div>
@@ -214,6 +219,10 @@
                                         كل الشكر والتقدم الخدمة رائعة وموفقة بأذن الله مع مزيد من التقدم والنجاح وزيادة
                                         الارباح
                                     </p>
+                                    <button type="button" class="btn btn-primary mt-4 px-4 py-2 btn-rounded"
+                                        data-toggle="modal" data-target="#exampleModal">
+                                        View
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -232,6 +241,10 @@
                                         نشكر لكم تعبكم ونسال الله الرزق لنا ولكم.
                                         الحمدلله معاملة جيدة
                                     </p>
+                                    <button type="button" class="btn btn-primary mt-4 px-4 py-2 btn-rounded"
+                                        data-toggle="modal" data-target="#exampleModal2">
+                                        View
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -250,6 +263,10 @@
                                         مرحبا الفترة يلي كنت مستثمر فيه كانت ممتازة وانا صار عندي ثقة كبيرة بشركتكن.
                                         وانا شخص بيفهم بالبوابة والاستثمار
                                     </p>
+                                    <button type="button" class="btn btn-primary mt-4 px-4 py-2 btn-rounded"
+                                        data-toggle="modal" data-target="#exampleModal3">
+                                        View
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -268,6 +285,10 @@
                                         هلا كيفكن انا الي شهرين تقريبا مستثمر والحمدلله تمام عم استفاد وانشالله الى احسن
                                         معكن
                                     </p>
+                                    <button type="button" class="btn btn-primary mt-4 px-4 py-2 btn-rounded"
+                                        data-toggle="modal" data-target="#exampleModal4">
+                                        View
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -284,13 +305,96 @@
     </div>
 </div>
 <!-- end testimonial section -->
+
+<section class="modals">
+    <!-- Modal1 -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img src="{{asset('assets/images/testimonial1.jpeg')}}" alt="">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal2 -->
+    <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img src="{{asset('assets/images/testimonial2.jpeg')}}" alt="">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal3 -->
+    <div class="modal fade" id="exampleModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img src="{{asset('assets/images/testimonial3.jpeg')}}" alt="">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal4 -->
+    <div class="modal fade" id="exampleModal4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img src="{{asset('assets/images/testimonial4.jpeg')}}" alt="">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 <!-- comments  section -->
 <div class="contact" id="contact">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
                 <div class="titlepage">
-                    <h2> <span class="yellow">Contact Us</span><br> Become VIP</h2>
+                    <h2> <span class="yellow">Contact Us</span><br> Become a VIP Member</h2>
                 </div>
             </div>
         </div>
