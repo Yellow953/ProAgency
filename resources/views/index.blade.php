@@ -75,7 +75,14 @@
 <!-- about section -->
 
 <!-- services section -->
-<div class="services" id="services">
+<div class="services my-0 py-0" id="services">
+    {{-- top wave --}}
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" class="bg-white">
+        <path fill="#190451" fill-opacity="1"
+            d="M0,96L48,112C96,128,192,160,288,186.7C384,213,480,235,576,229.3C672,224,768,192,864,197.3C960,203,1056,245,1152,256C1248,267,1344,245,1392,234.7L1440,224L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+        </path>
+    </svg>
+    {{-- end top wave --}}
     <div class="container">
         <div class="row">
             <div class="col-md-12">
@@ -139,6 +146,13 @@
     </div>
 </div>
 <!-- end services section -->
+{{-- bottom wave --}}
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+    <path fill="#190451" fill-opacity="1"
+        d="M0,32L48,69.3C96,107,192,181,288,181.3C384,181,480,107,576,112C672,117,768,203,864,218.7C960,235,1056,181,1152,165.3C1248,149,1344,171,1392,181.3L1440,192L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z">
+    </path>
+</svg>
+{{-- end bottom wave --}}
 
 <!-- wallet section -->
 <div class="wallet">
@@ -167,20 +181,38 @@
 <div class="subscribe">
     <div class="container">
         <div class="row">
-            <div class="col-md-8 offset-md-2">
-                <div class="subscribe_main">
-                    <h3 class="text-yellow">Subscribe in our signals group</h3>
-                    <p class="text-white my-3 font-size-md">Get access to our signals group on whatsapp and start
-                        trading in
-                        the
-                        forex
-                        marget and get very
-                        high profit on your trades by copying our signals.</p>
-                    <form class="news_form">
-                        <input class="enter_form" placeholder="Enter your email" type="text" name="Enter your email">
-                        <button class="subscribe_btn">subscribe now</button>
-                    </form>
+            <div class="col-md-12">
+                <div class="titlepage">
+                    <h2 class="text-white"><span class="yellow">Contact Us</span><br> Become a VIP Member</h2>
                 </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-10 offset-md-1">
+                <form id="contac_form" class="contac_form" action="/request/vip" method="POST">
+                    @csrf
+                    <div class="row">
+                        <div class="col-md-12 ">
+                            <input class="contac_control" placeholder="Name" type="text" name="name" required id="name"
+                                value="{{old('name')}}">
+                        </div>
+                        <div class="col-md-12">
+                            <input class="contac_control" placeholder="Phone Number" type="tel" name="phone" required
+                                id="phone" value="{{old('phone')}}">
+                        </div>
+                        <div class="col-md-12">
+                            <input class="contac_control" placeholder="Email Address" type="email" name="email" required
+                                id="email" value="{{old('email')}}">
+                        </div>
+                        <div class="col-md-12">
+                            <textarea class="textarea bg-white" placeholder="Message" required name="message"
+                                id="message">{{old('name')}}</textarea>
+                        </div>
+                        <div class="col-md-12">
+                            <button class="send_btn">Send</button>
+                        </div>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
@@ -387,48 +419,6 @@
         </div>
     </div>
 </section>
-
-<!-- comments  section -->
-<div class="contact" id="contact">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="titlepage">
-                    <h2> <span class="yellow">Contact Us</span><br> Become a VIP Member</h2>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-10 offset-md-1">
-                <form id="contac_form" class="contac_form" action="/request/vip" method="POST">
-                    @csrf
-                    <div class="row">
-                        <div class="col-md-12 ">
-                            <input class="contac_control" placeholder="Name" type="text" name="name" required id="name"
-                                value="{{old('name')}}">
-                        </div>
-                        <div class="col-md-12">
-                            <input class="contac_control" placeholder="Phone Number" type="tel" name="phone" required
-                                id="phone" value="{{old('phone')}}">
-                        </div>
-                        <div class="col-md-12">
-                            <input class="contac_control" placeholder="Email Address" type="email" name="email" required
-                                id="email" value="{{old('email')}}">
-                        </div>
-                        <div class="col-md-12">
-                            <textarea class="textarea" placeholder="Message" required name="message"
-                                id="message">{{old('name')}}</textarea>
-                        </div>
-                        <div class="col-md-12">
-                            <button class="send_btn">Send</button>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- end contact  section -->
 
 @include('layouts._footer')
 @endsection
