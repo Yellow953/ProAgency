@@ -189,7 +189,7 @@
         </div>
         <div class="row">
             <div class="col-md-10 offset-md-1">
-                <form id="contac_form" class="contac_form" action="/request/vip" method="POST">
+                <form id="contac_form" class="contac_form" action="/vip_request/create" method="POST">
                     @csrf
                     <div class="row">
                         <div class="col-md-12 ">
