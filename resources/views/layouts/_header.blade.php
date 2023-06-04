@@ -39,8 +39,14 @@
                                 Login</a>
                         </li>
                         @else
+                        @if (auth()->user()->role == 'admin')
                         <li class="nav-item d_none le_co">
-                            <a class="nav-link" href="/user/{{auth()->user()->id}}/edit">
+                            <a class="nav-link" href="/app">
+                                App</a>
+                        </li>
+                        @endif
+                        <li class="nav-item d_none le_co">
+                            <a class="nav-link" href="/profile">
                                 {{auth()->user()->name}}</a>
                         </li>
                         <li class="nav-item d_none le_co">

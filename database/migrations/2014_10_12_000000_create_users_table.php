@@ -14,7 +14,10 @@ return new class extends Migration {
 
             $table->string('role')->default('user');
             $table->string('phone')->nullable();
-            $table->string('image')->nullable();
+
+            $table->string('service_type')->nullable();
+            $table->double('amount')->nullable();
+            $table->date('untill')->nullable();
 
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');

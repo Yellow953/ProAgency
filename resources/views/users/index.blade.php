@@ -8,7 +8,7 @@
             <h3 class="title-5 m-b-35">Users</h3>
             <div class="table-data__tool">
                 <div class="table-data__tool-left">
-                    <form action="/users" method="get" class="d-flex">
+                    <form action="/app/users" method="get" class="d-flex">
                         @csrf
                         <input type="text" name="search" class="form-control" placeholder="Type here to search ...">
 
@@ -21,10 +21,8 @@
                     </form>
                 </div>
                 <div class="table-data__tool-right">
-                    <a href="/user/new" class="au-btn au-btn-icon au-btn--green au-btn--small">
+                    <a href="app/user/new" class="au-btn au-btn-icon au-btn--green au-btn--small">
                         <i class="zmdi zmdi-plus"></i>add user</a>
-                    <a href="#" class="au-btn au-btn-icon btn-secondary au-btn--small">
-                        Export</a>
                 </div>
             </div>
             <div class="table-responsive table-responsive-data2">
@@ -35,6 +33,7 @@
                             <th>email</th>
                             <th>phone number</th>
                             <th>role</th>
+                            <th>service</th>
                             <th></th>
                         </tr>
                     </thead>
@@ -43,7 +42,8 @@
                         <tr class="tr-shadow">
                             <td>
                                 <div class="d-flex">
-                                    <img src="{{asset($user->image)}}" alt="" class="profile-table">
+                                    <img src="{{asset('assets/images/default_profile.png')}}" alt=""
+                                        class="profile-table">
                                     <span class="my-auto mx-2">{{$user->name}}</span>
                                 </div>
                             </td>
@@ -55,19 +55,23 @@
                                 <span class="status--process">{{$user->role}}</span>
                             </td>
                             <td>
+                                {{$user->service_type}} <br>
+                                {{$user->amount}} <br>
+                                {{$user->untill}}
+                            </td>
+                            <td>
                                 <div class="table-data-feature">
-                                    <button class="item" data-toggle="tooltip" data-placement="top" title="Send">
-                                        <i class="zmdi zmdi-mail-send"></i>
-                                    </button>
-                                    <button class="item" data-toggle="tooltip" data-placement="top" title="Edit">
+                                    <a class="item" href="/app/user/{{$user->id}}/edit">
                                         <i class="zmdi zmdi-edit"></i>
-                                    </button>
-                                    <button class="item" data-toggle="tooltip" data-placement="top" title="Delete">
-                                        <i class="zmdi zmdi-delete"></i>
-                                    </button>
-                                    <button class="item" data-toggle="tooltip" data-placement="top" title="More">
-                                        <i class="zmdi zmdi-more"></i>
-                                    </button>
+                                    </a>
+
+                                    <form method="GET" action="/app/user/{{$user->id}}/destroy">
+                                        @csrf
+                                        <button type="submit" class="item show_confirm" data-toggle="tooltip"
+                                            title='Delete'>
+                                            <i class="zmdi zmdi-delete"></i>
+                                        </button>
+                                    </form>
                                 </div>
                             </td>
                         </tr>

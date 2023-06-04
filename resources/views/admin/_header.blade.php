@@ -12,7 +12,7 @@
                     <div class="account-wrap">
                         <div class="account-item clearfix js-item-menu">
                             <div class="image">
-                                <img src="{{asset(auth()->user()->image)}}" alt="John Doe" />
+                                <img src="{{asset('assets/images/default_profile.png')}}" alt="John Doe" />
                             </div>
                             <div class="content">
                                 <a class="js-acc-btn" href="#">{{auth()->user()->name}}</a>
@@ -21,7 +21,7 @@
                                 <div class="info clearfix">
                                     <div class="image">
                                         <a href="#">
-                                            <img src="{{asset(auth()->user()->image)}}" alt="John Doe" />
+                                            <img src="{{asset('assets/images/default_profile.png')}}" alt="John Doe" />
                                         </a>
                                     </div>
                                     <div class="content">
@@ -33,7 +33,7 @@
                                 </div>
                                 <div class="account-dropdown__body">
                                     <div class="account-dropdown__item">
-                                        <a href="/user/{{auth()->user()->id}}/edit">
+                                        <a href="/profile">
                                             <i class="zmdi zmdi-account"></i>Account</a>
                                     </div>
                                 </div>

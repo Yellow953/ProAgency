@@ -20,6 +20,10 @@
         a {
             text-decoration: none;
         }
+
+        .rounded-lg {
+            border-radius: 50px;
+        }
     </style>
 </head>
 
@@ -28,7 +32,8 @@
         <div class="row">
             <div class="col-md-6 offset-md-3">
                 <h2 class="text-center text-dark mt-5">Login</h2>
-                <div class="card my-5" style="background-image: url({{asset('assets/images/service.jpg')}});">
+                <div class="card my-5 rounded-lg shadow-lg"
+                    style="background-image: url({{asset('assets/images/service.jpg')}});">
 
                     <form method="POST" action="{{ route('login') }}" class="card-body cardbody-color p-lg-5">
                         @csrf

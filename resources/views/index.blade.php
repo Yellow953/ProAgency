@@ -193,20 +193,32 @@
                     @csrf
                     <div class="row">
                         <div class="col-md-12 ">
-                            <input class="contac_control" placeholder="Name" type="text" name="name" required id="name"
-                                value="{{old('name')}}">
+                            <input class="contac_control" placeholder="Name *" type="text" name="name" required
+                                id="name" value="{{old('name')}}">
                         </div>
                         <div class="col-md-12">
-                            <input class="contac_control" placeholder="Phone Number" type="tel" name="phone" required
-                                id="phone" value="{{old('phone')}}">
+                            <input class="contac_control" placeholder="Phone Number" type="tel" name="phone" id="phone"
+                                required value="{{old('phone')}}">
                         </div>
                         <div class="col-md-12">
-                            <input class="contac_control" placeholder="Email Address" type="email" name="email" required
-                                id="email" value="{{old('email')}}">
+                            <input class="contac_control" placeholder="Email Address *" type="email" name="email"
+                                required id="email" value="{{old('email')}}">
                         </div>
                         <div class="col-md-12">
-                            <textarea class="textarea bg-white" placeholder="Message" required name="message"
-                                id="message">{{old('name')}}</textarea>
+                            <select name="service_type" id="service_type" required class="contac_control">
+                                <option value="investment" selected>Investment</option>
+                                <option value="1 million challenge">1 Million Challenge</option>
+                                <option value="trading signals">Trading Signals</option>
+                                <option value="learn to trade">Learn to Trade</option>
+                            </select>
+                        </div>
+                        <div class="col-md-12">
+                            <input class="contac_control" placeholder="Amount" type="number" name="amount" id="amount"
+                                required value="{{old('amount')}}">
+                        </div>
+                        <div class="col-md-12">
+                            <textarea class="textarea bg-white" placeholder="Message" name="message" id="message"
+                                required>{{old('name')}}</textarea>
                         </div>
                         <div class="col-md-12">
                             <button class="send_btn">Send</button>

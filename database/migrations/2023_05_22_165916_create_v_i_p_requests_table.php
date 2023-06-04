@@ -10,10 +10,11 @@ return new class extends Migration {
         Schema::create('v_i_p_requests', function (Blueprint $table) {
             $table->id();
             $table->string('name')->unique();
-            $table->string('phone');
+            $table->string('phone')->nullable();
             $table->string('email');
-            $table->string('message');
-
+            $table->string('service_type');
+            $table->double('amount')->nullable();
+            $table->string('message')->nullable();
             $table->timestamps();
         });
     }

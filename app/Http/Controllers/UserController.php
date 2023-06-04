@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Log;
 use App\Models\User;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 
@@ -14,12 +16,12 @@ class UserController extends Controller
         $this->middleware('admin')->only(['index', 'new', 'create', 'destroy']);
     }
 
-    public function Edit()
+    public function profile()
     {
-        return view('users.edit');
+        return view('users.profile');
     }
 
-    public function Update(Request $request)
+    public function profile_update(Request $request)
     {
         $user = User::find(auth()->user()->id);
 
@@ -27,19 +29,11 @@ class UserController extends Controller
         $user->email = $request->email;
         $user->phone = $request->phone;
 
-        if ($request->hasFile('image')) {
-            $file = $request->file('image');
-            $ext = $file->getClientOriginalExtension();
-            $filename = time() . '.' . $ext;
-            $file->move('uploads/profiles/', $filename);
-            $user->image = '/uploads/profiles/' . $filename;
-        }
-
         $user->save();
-        return redirect('/profile/' . auth()->user()->id)->with('success', 'Profile Updated Successfully');
+        return redirect('/profile')->with('success', 'Profile Updated Successfully');
     }
 
-    public function SavePassword(Request $request, $id)
+    public function SavePassword(Request $request)
     {
         $user = User::find(auth()->user()->id);
 
@@ -48,7 +42,7 @@ class UserController extends Controller
             $user->save();
         }
 
-        return redirect('/profile/' . auth()->user()->id)->with('success', 'Password Updated Successfully');
+        return redirect('/profile')->with('success', 'Password Updated Successfully');
     }
 
     public function index()
@@ -80,28 +74,61 @@ class UserController extends Controller
 
         $user = new User();
 
-        $user->name = $request->name;
-        $user->email = $request->email;
-        $user->phone = $request->phone;
+        $user->create([
+            'name' => $request->name,
+            'phone' => $request->phone,
+            'email' => $request->email,
+            'role' => $request->role,
+            'password' => Hash::make($request->password),
+            'service_type' => $request->service_type,
+            'amount' => $request->amount,
+            'untill' => $request->untill,
+        ]);
 
-        if ($request->hasFile('image')) {
-            $file = $request->file('image');
-            $ext = $file->getClientOriginalExtension();
-            $filename = time() . '.' . $ext;
-            $file->move('uploads/profiles/', $filename);
-            $user->image = '/uploads/profiles/' . $filename;
-        }
+        $log = new Log();
+        $log->text = Auth()->user()->name . " created new user : " . $user->name . " in " . Carbon::now()->toDateTimeString();
+        $log->save();
 
-        $user->role = $request->role;
-        $user->password = Hash::make($request->password);
-
-        $user->save();
         return redirect('/app/users')->with('success', 'User Created Successfully');
+    }
+
+    public function edit($id)
+    {
+        return view('users.new');
+    }
+
+    public function update(Request $request, $id)
+    {
+        $user = User::find($id);
+
+        $user->update([
+            'name' => $request->name,
+            'phone' => $request->phone,
+            'email' => $request->email,
+            'role' => $request->role,
+            'password' => Hash::make($request->password),
+            'service_type' => $request->service_type,
+            'amount' => $request->amount,
+            'untill' => $request->untill,
+        ]);
+
+        $log = new Log();
+        $log->text = Auth()->user()->name . " updated user : " . $user->name . " in " . Carbon::now()->toDateTimeString();
+        $log->save();
+
+        return redirect('/app/users')->with('success', 'User Updated Successfully');
     }
 
     public function destroy($id)
     {
-        User::find($id)->delete();
+        $user = User::find($id);
+
+        $log = new Log();
+        $log->text = Auth()->user()->name . " deleted user : " . $user->name . " in " . Carbon::now()->toDateTimeString();
+        $log->save();
+
+        $user->delete();
+
         return redirect('/app/users')->with('danger', 'User Deleted Successfully');
     }
 

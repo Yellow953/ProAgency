@@ -15,7 +15,6 @@ class UserSeeder extends Seeder
             'phone' => '89675',
             'role' => 'admin',
             'email' => 'test@test.com',
-            'image' => '/assets/images/default_profile.png',
             'password' => Hash::make('qwe123'),
             'created_at' => now(),
             'updated_at' => now(),

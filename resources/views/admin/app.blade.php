@@ -80,6 +80,30 @@
 
     <!-- Main JS-->
     <script src="{{asset('admin/js/main.js')}}"></script>
+
+    {{-- Sweet Alert --}}
+    <script src="{{asset('admin/js/sweetalert.min.js')}}"></script>
+    {{-- Delete Confirmation --}}
+    <script type="text/javascript">
+        $('.show_confirm').click(function(event) {
+           var form =  $(this).closest("form");
+           var name = $(this).data("name");
+           event.preventDefault();
+           swal({
+               title: `Are you sure you want to delete this record?`,
+               text: "If you delete this, it will be gone forever.",
+               icon: "warning",
+               buttons: true,
+               dangerMode: true,
+           })
+           .then((willDelete) => {
+               if (willDelete) {
+                   form.submit();
+               }
+           });
+       });
+    </script>
+
 </body>
 
 </html>
