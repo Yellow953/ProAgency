@@ -9,6 +9,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>{{ config('app.name', 'ProAgency') }}</title>
+    <link rel="shortcut icon" href="{{asset('assets/images/logo.png')}}" type="image/png">
 
     <!-- bootstrap css -->
     <link rel="stylesheet" href="{{asset('assets/css/custom.css')}}">

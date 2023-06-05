@@ -69,7 +69,6 @@ class UserController extends Controller
             'phone' => 'required',
             'email' => 'required',
             'role' => 'required',
-            'password' => 'required|confirmed',
         ]);
 
         $user = new User();
@@ -79,7 +78,7 @@ class UserController extends Controller
             'phone' => $request->phone,
             'email' => $request->email,
             'role' => $request->role,
-            'password' => Hash::make($request->password),
+            'password' => Hash::make('password'),
             'service_type' => $request->service_type,
             'amount' => $request->amount,
             'untill' => $request->untill,
@@ -94,7 +93,8 @@ class UserController extends Controller
 
     public function edit($id)
     {
-        return view('users.new');
+        $user = User::find($id);
+        return view('users.edit', compact('user'));
     }
 
     public function update(Request $request, $id)
