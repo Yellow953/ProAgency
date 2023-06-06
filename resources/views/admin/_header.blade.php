@@ -4,7 +4,7 @@
         <div class="container-fluid">
             <div class="header-wrap">
                 <form class="form-header" action="" method="POST">
-                    <h3 class="my-auto mx-5">CRM</h3>
+                    <h3 class="my-auto mx-5 text-warning">CRM</h3>
                 </form>
                 <div class="header-button">
                     <div class="noti-wrap">
